@@ -1,0 +1,123 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Section */
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: #ffc107 !important;
+}
+
+/* Search Bar Section */
+.search-container input,
+.search-container button {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Main Container Layout */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20px;
+}
+
+.product-container .card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-container .card:hover {
+    transform: translateY(-10px);
+}
+
+.product-container .card img {
+    object-fit: cover;
+    height: 200px;
+}
+
+/* Cart Section */
+.cart-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+.cart-container h4 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cart-item {
+    font-size: 0.9rem;
+}
+
+.cart-item-name {
+    max-width: 150px;
+}
+
+/* Button Styling */
+button {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .cart-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-nav .nav-link {
+        padding: 10px 15px;
+    }
+
+    .search-container input,
+    .search-container button {
+        width: 100%;
+    }
+}
